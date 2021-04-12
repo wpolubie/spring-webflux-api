@@ -13,7 +13,7 @@ public class StudentApi {
         this.studentRepo = studentRepo;
     }
     @GetMapping
-    public Flux<String> getAll() {
-        studentRepo.findAll();
+    public Flux<Student> getAll() {
+      return studentRepo.findAll();
     }
 }
