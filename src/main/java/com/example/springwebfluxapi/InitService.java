@@ -24,6 +24,7 @@ public class InitService {
                 .flatMap(studentRepo::save)
                 .thenMany(studentRepo.findAll())
                 .subscribe(System.out::println);
-
+        studentRepo.save(new Student("Przemek")).subscribe();
+        //async example
     }
 }
