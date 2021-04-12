@@ -1,5 +1,6 @@
 package com.example.springwebfluxapi;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -12,7 +13,7 @@ public class StudentApi {
     public StudentApi(StudentRepo studentRepo) {
         this.studentRepo = studentRepo;
     }
-    @GetMapping
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public Flux<Student> getAll() {
       return studentRepo.findAll();
     }
