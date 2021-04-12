@@ -3,9 +3,10 @@ package com.example.springwebfluxapi;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
+@ToString
 @Document
 public class Student {
 
